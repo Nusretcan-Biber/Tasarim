@@ -30,5 +30,17 @@
         <argument
             android:name="MekanlarArguments"
             app:argType="com.example.tasarim.data.entity.Mekanlar" />
+        <action
+            android:id="@+id/action_detayFragment_to_yolTarifiAlsActivity"
+            app:destination="@id/yolTarifiAlsActivity" />
     </fragment>
+    <activity
+        android:id="@+id/yolTarifiAlsActivity"
+        android:name="com.example.tasarim.YolTarifiAlsActivity"
+        android:label="activity_yol_tarifi_als"
+        tools:layout="@layout/activity_yol_tarifi_als" >
+        <argument
+            android:name="MekanlarArguments1"
+            app:argType="com.example.tasarim.data.entity.Mekanlar" />
+    </activity>
 </navigation>

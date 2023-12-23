@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tasarim"
         tools:targetApi="31">
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDcz47pM3C9k4qPxyjAaSANLDo731ERpJA" />
+
+        <activity
+            android:name=".YolTarifiAlsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_yol_tarifi_als" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

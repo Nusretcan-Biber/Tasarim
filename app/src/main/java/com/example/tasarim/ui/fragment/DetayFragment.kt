@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.example.tasarim.R
 import com.example.tasarim.databinding.FragmentDetayBinding
@@ -23,6 +24,12 @@ class DetayFragment : Fragment() {
         binding.textViewMekanismi.text = "${gelenMekan.isim}"
         binding.textViewArdess.text ="${gelenMekan.adres}"
         binding.textViewHakkNdaMetni.text ="${gelenMekan.metin}"
+
+        binding.buttonKonumaGit.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(DetayFragmentDirections.actionDetayFragmentToYolTarifiAlsActivity(MekanlarArguments1 = gelenMekan))
+        }
+
 
 
 
