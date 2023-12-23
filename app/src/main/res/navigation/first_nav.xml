@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_nav"
+    app:startDestination="@id/enteryFragment">
+    <fragment
+        android:id="@+id/listelemeFragment"
+        android:name="com.example.tasarim.ui.fragment.ListelemeFragment"
+        android:label="fragment_listeleme"
+        tools:layout="@layout/fragment_listeleme" >
+        <action
+            android:id="@+id/action_listelemeFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enteryFragment"
+        android:name="com.example.tasarim.ui.fragment.EnteryFragment"
+        android:label="fragment_entery"
+        tools:layout="@layout/fragment_entery" >
+        <action
+            android:id="@+id/action_enteryFragment_to_listelemeFragment"
+            app:destination="@id/listelemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.tasarim.ui.fragment.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="MekanlarArguments"
+            app:argType="com.example.tasarim.data.entity.Mekanlar" />
+    </fragment>
+</navigation>
